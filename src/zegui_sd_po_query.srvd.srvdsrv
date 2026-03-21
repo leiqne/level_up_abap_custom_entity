@@ -1,0 +1,4 @@
+@EndUserText.label: 'Custom entity'
+define service ZEGUI_SD_PO_QUERY {
+  expose zegui_ce_purchaseorder;
+}
