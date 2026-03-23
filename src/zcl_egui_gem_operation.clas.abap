@@ -44,6 +44,9 @@ CLASS zcl_egui_gem_operation IMPLEMENTATION.
           WHERE poid = @me->lv_poid.
           commit work.
     ENDTRY.
+    get time stamp field data(lv_timestamp).
+      update zegui_purc_order set last_changed_at = @lv_timestamp where po_id = @me->lv_poid.
+      commit work.
   ENDMETHOD.
 
 ENDCLASS.
